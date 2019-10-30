@@ -7,6 +7,9 @@
         }
     ],
     "autoload": {
+        "files": [
+            "src/Constituencies.php"
+        ],
         "psr-4": {
             "Election\\": "src/Election"
         }
