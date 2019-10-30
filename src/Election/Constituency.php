@@ -14,14 +14,6 @@ class Constituency
         $this->code = $code;
     }
 
-    public static function get(string $code)
-    {
-        $constituency = new self($code);
-        (new GEReader())->addVotes($constituency);
-
-        return $constituency;
-    }
-
     public function getCode()
     {
         return $this->code;
