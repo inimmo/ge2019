@@ -3,10 +3,21 @@ namespace Election;
 
 class ConstituencyData
 {
+    private static $data;
+
     public static function getConstituencyName(string $code)
     {
-        $data = json_decode(file_get_contents(ROOT . 'data/constituencies.json'));
+        self::initialise();
 
-        return $data->hexes->{$code}->n;
+        return self::$data->hexes->{$code}->n;
+    }
+
+    private static function initialise()
+    {
+        if (isset(self::$data)) {
+            return;
+        }
+
+        self::$data = json_decode(file_get_contents(ROOT . 'data/constituencies.json'));
     }
 }
