@@ -1,0 +1,17 @@
+{
+    "name": "inimmo/election",
+    "authors": [
+        {
+            "name": "Iain Nimmo",
+            "email": "inimmo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Election\\": "src/Election"
+        }
+    },
+    "require": {
+        "league/csv": "^9.4"
+    }
+}
